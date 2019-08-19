@@ -1,11 +1,17 @@
 .hello {
     color: #ff0000;
-    width : 500px;
-    height : 500px;
-    margin : 25%;
 }
 
 .black {
     color:black;
+}
+
+#first-div {
+    margin-left: 5%;
+    margin-top : 3%;
+}
+#ip {
+    width : 50%;
+    margin-left: 5%;
 }
 

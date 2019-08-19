@@ -38,4 +38,7 @@ nodes = () => { return {'op':'a', 'lhs' : 5, 'rhs' : 10} }
 var {op,lhs,rhs} = nodes();
 console.log(op,lhs,rhs);
 
+
+
+
 module.exports = {print, red, mapper, Fruits};
