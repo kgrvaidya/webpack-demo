@@ -9,11 +9,6 @@ const red = (...args) => {
     return args.reduce((tot,ele) => tot+ele,0);
 }
 
-const mapper = (...args) => {
-    console.log(args);
-    return args.map((ele) => ele.name);
-}
-
 const Fruits = class {
     constructor(){
         this.name = " ";
@@ -41,4 +36,4 @@ console.log(op,lhs,rhs);
 
 
 
-module.exports = {print, red, mapper, Fruits};
+module.exports = {print, red, Fruits};

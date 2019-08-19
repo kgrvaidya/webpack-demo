@@ -1,4 +1,4 @@
-import {print,red, Fruits} from './lib';
+import {print,red} from './lib';
 import './style.css';
 import img from './download.png'
 
@@ -7,18 +7,25 @@ console.log("Hello")
 print([1,2,3]);
 // console.log(red(1,2,3,4,5));
 
+var input = document.getElementById('ip');
+var diapArea = document.getElementById('dispArea');
+
 function reduc(){
-    var redd = document.getElementById('reducer'); //Create sub division
+    // var redd = document.getElementById('dispArea'); //Create sub division
     //Reduce feature
-    redd.innerHTML = red(1,2,3,4,5);
+    diapArea.innerHTML = "Reducer clicked!! and Value :" + red(1,2,3,4,5);
     // return redd;
+}
+//Default Value doesnt work with inputs.. still working on
+function defaultParameter(val='String'){
+    console.log(val);
+    if(val==''){ val='String; Default Value'}
+    diapArea.innerHTML = val;   
 }
 
 function component() {
     const element = document.createElement('div'); //Create Division
-    element.innerHTML = 'Hello World'; //Insert Hello world into this division
-    element.classList.add('hello'); //Adding class hello to this div
-
+    
     // Insert Image
     const bg = new Image();
     bg.src = img;
@@ -26,20 +33,16 @@ function component() {
     element.appendChild(bg); //Appending Image to element
 
 
-    var btn = document.getElementById('redu');
-    btn.addEventListener('click',reduc);
-    
-    //Paragraph
-    var para = document.createElement('p');
-    para.setAttribute('style',"color:red");
-    var pname = new Fruits();
-    pname.setName('Banana'); 
+    var redBtn = document.getElementById('redu');
+    redBtn.addEventListener('click',reduc);
 
-    para.innerHTML = pname.getName();
-    para.classList.add('black');
-    // element.appendChild(innerElement);
-    element.appendChild(para);
+    // console.log(defaultParameter(document.getElementById('ip').value));
 
+    var defBtn = document.getElementById('default');
+    defBtn.addEventListener('click', ()=>{ defaultParameter(input.value) });
+
+    var litBtn = document.getElementById('lit');
+    litBtn.addEventListener('click', function(){dispArea.innerText = `The Value is ${input.value}`; dispArea.style.bold});
     return element;
 }
 

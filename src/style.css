@@ -1,17 +1,28 @@
 .hello {
     color: #ff0000;
 }
-
+#head {
+    position: absolute;
+    top : 5px;
+    left : 20px;
+    font-size: 2rem;
+}
 .black {
     color:black;
 }
 
 #first-div {
-    margin-left: 5%;
+    margin-left: 10%;
     margin-top : 3%;
 }
 #ip {
     width : 50%;
-    margin-left: 5%;
+    /* margin-left: 5%; */
+    margin-top: 10%
+    
+}
+#dispArea {
+    /* margin-left: 5%; */
+    padding : 5px;
 }
 
