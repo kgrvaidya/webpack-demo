@@ -31,10 +31,11 @@ function component() {
     // Insert Image
     const bg = new Image();
     bg.src = img;
+    bg.style.zIndex = '-1';
     bg.setAttribute('style','position:absolute;top:1%;right:3%'); //Positioning the image
     element.appendChild(bg); //Appending Image to element
 
-    var p = document.createElement('p');
+    var p = document.createElement('p'); 
     p.textContent = "Click me";
     p.style.border = '2px solid blue';
     p.style.marginRight = '25%';
