@@ -1,9 +1,11 @@
 import {print,red} from './lib';
 import './style.css';
+import printMe from './print';
+
 import img from './download.png'
 
 
-console.log("Hello")
+// console.log("Hello")
 print([1,2,3]);
 // console.log(red(1,2,3,4,5));
 
@@ -32,6 +34,12 @@ function component() {
     bg.setAttribute('style','position:absolute;top:1%;right:3%'); //Positioning the image
     element.appendChild(bg); //Appending Image to element
 
+    var p = document.createElement('p');
+    p.textContent = "Click me";
+    p.style.border = '2px solid blue';
+    p.style.marginRight = '25%';
+    p.onclick = printMe;
+    element.appendChild(p);
 
     var redBtn = document.getElementById('redu');
     redBtn.addEventListener('click',reduc);
@@ -44,6 +52,7 @@ function component() {
     var litBtn = document.getElementById('lit');
     litBtn.addEventListener('click', function(){dispArea.innerText = `The Value is ${input.value}`; dispArea.style.bold});
     return element;
+    
 }
 
 
