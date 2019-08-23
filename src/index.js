@@ -9,17 +9,20 @@ print([1,2,3]);
 var input = document.querySelector('#ip');
 var diapArea = document.querySelector('#dispArea');
 
-function reduc () {
+var reduc = () => {
  
-    diapArea.innerHTML = "Reducer clicked!! and Value :" + red(1,2,3,4,5);
+    diapArea.innerHTML = `Reducer clicked!! and Value : + ${red(1,2,3,4,5)}`;
 }
-function defaultParameter (val='String') {
+var defaultParameter = (val='String') => {
     console.log(val);
-    if(val==''){ val='String; Default Value'}
+    if(val=='')
+        { 
+            val='String; Default Value';
+        }
     diapArea.innerHTML = val;   
 }
 
-function component() {
+var component = () => {
     const element = document.createElement('div'); 
     
     const bg = new Image();
@@ -42,7 +45,7 @@ function component() {
     defBtn.addEventListener('click', ()=>{ defaultParameter(input.value) });
 
     var litBtn = document.getElementById('lit');
-    litBtn.addEventListener('click', function(){dispArea.innerText = `The Value is ${input.value}`; dispArea.style.bold});
+    litBtn.addEventListener('click', () => {dispArea.innerText = `The Value is ${input.value}`; dispArea.style.bold});
     return element;
     
 }
